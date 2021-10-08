@@ -22,11 +22,7 @@ let handler = async (m, { conn, text, participants }) => {
   )
   await conn.relayWAMessage(msg)
 }
-handler.help = ['aviso', 'anuncio', 'hidetag'].map(v => 'o' + v + ' (texto)')
-handler.tags = ['group']
-handler.command = /^o(aviso|anuncio|ht|hidetag)$/i
-
-handler.owner = true
-handler.group = true
+handler.customPrefix = ['i']
+handler.command = ['i']
 
 module.exports = handler
